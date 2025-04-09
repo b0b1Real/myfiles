@@ -1,0 +1,72 @@
+#include <bits/stdc++.h>
+
+#define sz(x) (int)(x).size()
+#define mp make_pair
+#define pb push_back
+#define lb lower_bound
+#define ub upper_bound
+#define ll long long
+#define all(x) x.begin(), x.end()
+#define hashmap unordered_map
+#define forn(i, n) for(int i = 0;i<int(n);i++)
+
+const int MOD = 1000000007;
+const ll INF = 1e18;
+const int MX = 10001;
+
+int main(){
+	std::ios::sync_with_stdio(0);
+	std::cin.tie(0);
+	int t;
+	std::cin >> t;
+	while(t--){
+		int n;
+		std::cin >> n;
+		int ans = 0;
+		if(n>9)
+			ans+=10;
+		else{
+			ans+=n;
+			std::cout << ans << '\n';
+			continue;
+		}
+		if(n>99)
+			ans+=9;
+		else{
+			ans+=n/10-1;
+			std::cout << ans << '\n';
+			continue;
+		}
+		if(n>999)
+			ans+=9;
+		else{
+			ans+=n/100-1;
+			std::cout << ans << '\n';
+			continue;
+		}
+		if(n>9999)
+			ans+=9;
+		else{
+			ans+=n/1000-1;
+			std::cout << ans << '\n';
+			continue;
+		}
+		if(n>99999)
+			ans+=9;
+		else{
+			ans+=n/10000-1;
+			std::cout << ans << '\n';
+			continue;
+		}
+		if(n>999999)
+			ans+=9;
+		else{
+			ans+=n/100000-1;
+			std::cout << ans << '\n';
+			continue;
+		}
+		std::cout << ans << '\n';
+	}
+	return 0;
+}
+
